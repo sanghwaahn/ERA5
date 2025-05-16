@@ -1,9 +1,14 @@
 #####Combine#####
-package_tmp <- c("readxl", "openxlsx", "dplyr", "stringr", 
-                 "tidyr", "readxl", "writexl", "lubridate", "tidyverse",
-                 "sp", "ncdf4", "raster", "here", "zoo", "sf",
-                 "viridis", "rnaturalearth", "rnaturalearthdata", "rnaturalearthhires", 
-                 "stringdist", "fuzzyjoin", "haven", "Hmisc")
+package_tmp <- c(
+  "readxl", "openxlsx", "writexl", "haven", "ncdf4",
+  "dplyr", "tidyr", "stringr", "lubridate", "zoo", "Hmisc", "tidyverse",
+  "stringdist", "fuzzyjoin",
+  "sf", "sp", "raster",
+  "rnaturalearth", "rnaturalearthdata", "rnaturalearthhires",
+  "viridis",
+  "here"
+)
+
 packages <- unique(package_tmp)
 lapply(packages, library, character.only = TRUE)
 '%!in%' <- function(x,y)!('%in%'(x,y))

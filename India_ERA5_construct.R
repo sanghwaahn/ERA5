@@ -1,7 +1,12 @@
-package_tmp <- c("readxl", "openxlsx", "dplyr", "stringr", "data.table", "fst",
-                 "tidyr", "readxl", "writexl", "lubridate", "tidyverse", "future.apply", "signal",   
-                 "sp", "ncdf4", "raster", "here", "zoo", "sf", "purrr", "furrr", "crsuggest", "progressr", "exactextractr", 
-                 "viridis", "rnaturalearth", "rnaturalearthdata", "rnaturalearthhires")
+package_tmp <- c(
+  "readxl", "openxlsx", "writexl", "fst", "ncdf4",
+  "dplyr", "data.table", "tidyr", "lubridate", "zoo", "purrr", "furrr", "stringr",
+  "here", "future.apply", "progressr", "crsuggest", "signal",
+  "sf", "sp", "raster", "exactextractr",
+  "rnaturalearth", "rnaturalearthdata", "rnaturalearthhires",
+  "viridis",
+  "tidyverse"
+)
 packages <- unique(package_tmp)
 lapply(packages, library, character.only = TRUE)
 '%!in%' <- function(x,y)!('%in%'(x,y))
